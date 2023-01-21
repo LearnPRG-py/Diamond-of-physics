@@ -17,6 +17,7 @@ public class ObjBehaviour : MonoBehaviour
     public float tries;
     public Text triesTXT;
     public Text scoreTXT;
+    public Text ReqImgDistTXT;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,10 +40,15 @@ public class ObjBehaviour : MonoBehaviour
     public void ifCorrect(){
         randomobjdist = (float)(randomobj.Next(0, 8)-9f);
         reqimgdist = focaldist*randomobjdist/focaldist+randomobjdist;
+        ReqImgDistTXT.text = "Req Img Distance = "+reqimgdist.ToString();
+        score+=1;
+        scoreTXT.text = "Score:"+score.ToString();
+        triesTXT.text = "Tries:"+tries.ToString();
 
     }
     public void Check(){
         FindImgDist();
+        tries+=1;
         if (randomobjdist == objectdist){
             ifCorrect();
         }
