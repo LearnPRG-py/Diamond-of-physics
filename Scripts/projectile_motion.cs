@@ -36,5 +36,21 @@ public class projectile_motion : MonoBehaviour
     void Reset(){
         projectile.gravityScale = 0;
         projectile.velocity = Vector2.zero;
+        force = 0f;
+        angle = 0f;
+        transform.position = new Vector3 (-5f, -1.6f, 0f);
+    }
+    void Launch(){
+        if (force != null){
+            if (angle != null){
+                projectile.gravityScale = 1;
+                projectile.velocity = new Vector2 (force*Mathf.Cos(angle), force*Mathf.Sin(angle));
+                tries+=1;
+            }
+        }
+    }
+    void IfTouch(){
+        Reset();
+        score+=1;
     }
 }
