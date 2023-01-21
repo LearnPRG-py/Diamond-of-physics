@@ -1,0 +1,21 @@
+body {
+  background-image: linear-gradient(green, rgb(43, 43, 102));
+  height: 1000px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 70px;
+  color: rgb(25, 173, 173);
+}
+
+.start_adventure_button {
+  font-size: 40px;
+  border-radius: 20px;
+  background-color: aquamarine;
+  font-family: Roboto_Mono;
+}
+
+.text_align_center_button {
+  text-align: center;
+}
