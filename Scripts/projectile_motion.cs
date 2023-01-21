@@ -27,10 +27,10 @@ public class projectile_motion : MonoBehaviour
     {
         
     }
-    void GetForce(string a){
+    public void GetForce(string a){
         force = float.Parse(a);
     }
-    void GetAngle(string b){
+    public void GetAngle(string b){
         angle = float.Parse(b);
     }
     void Reset(){
@@ -40,7 +40,7 @@ public class projectile_motion : MonoBehaviour
         angle = 0f;
         transform.position = new Vector3 (-5f, -1.6f, 0f);
     }
-    void Launch(){
+    public void Launch(){
         if (force != null){
             if (angle != null){
                 projectile.gravityScale = 1;
@@ -49,7 +49,7 @@ public class projectile_motion : MonoBehaviour
             }
         }
     }
-    void IfTouch(){
+    public void IfTouch(){
         Reset();
         score+=1;
     }
