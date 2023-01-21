@@ -265,7 +265,7 @@ MonoBehaviour:
   triestext: {fileID: 0}
   score: 0
   tries: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 29878759}
   Target: {fileID: 0}
   Projectilecollider: {fileID: 0}
 --- !u!1 &519420028
