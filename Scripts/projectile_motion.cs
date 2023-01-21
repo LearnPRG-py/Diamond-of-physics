@@ -9,6 +9,7 @@ public class projectile_motion : MonoBehaviour
     public float angle;
     public Text scoretext;
     public Text triestext;
+    public Text projpos;
     public float score;
     public float tries;
     public Rigidbody2D projectile;
@@ -62,5 +63,6 @@ public class projectile_motion : MonoBehaviour
     public void UpdateTXT(){
         scoretext.text = "Score: "+score.ToString();
         triestext.text = "Tries:"+tries.ToString();
+        projpos.text = "("+transform.position.x+","+transform.position.y+")";
     }
 }
