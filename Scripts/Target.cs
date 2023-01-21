@@ -22,7 +22,7 @@ public class Target : MonoBehaviour
     {
         if (Targetcol.IsTouching(Projectile)){
         transform.position = new Vector3((float)randposx.NextDouble()*6f-1f, (float)randposy.NextDouble()*6f-1f,0);
-        targetposition.text = "Position is: ("+(Mathf.Round(transform.position.x*100f)/100f).ToString()+"),"+(Mathf.Round(transform.position.y*100f)/100f).ToString()+")";
+        targetposition.text = "Position is: ("+(Mathf.Round(transform.position.x*100f)/100f).ToString()+","+(Mathf.Round(transform.position.y*100f)/100f).ToString()+")";
         }
     }
 }
