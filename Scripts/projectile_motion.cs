@@ -26,6 +26,9 @@ public class projectile_motion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)){
             Reset();
         }
+        if (Projectilecollider.IsTouching(Target)){
+            IfTouch();
+        }
     }
     public void GetForce(string a){
         force = float.Parse(a);
@@ -55,5 +58,9 @@ public class projectile_motion : MonoBehaviour
     public void IfTouch(){
         Reset();
         score+=1;
+    }
+    public void UpdateTXT(){
+        scoretext.text = "Score: "+score.ToString();
+        triestext.text = "Tries:"+tries.ToString();
     }
 }
