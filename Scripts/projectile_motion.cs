@@ -44,7 +44,7 @@ public class projectile_motion : MonoBehaviour
         if (force != null){
             if (angle != null){
                 projectile.gravityScale = 1;
-                projectile.velocity = new Vector2 (force*Mathf.Cos(angle), force*Mathf.Sin(angle));
+                projectile.velocity = new Vector2 (force*Mathf.Cos(angle*3.141592/180), force*Mathf.Sin(angle*3.141592/180));
                 tries+=1;
             }
         }
