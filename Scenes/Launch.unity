@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 29878756}
   - component: {fileID: 29878759}
   - component: {fileID: 29878758}
+  - component: {fileID: 29878760}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -246,6 +247,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &29878760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29878755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9210ecec139b3428191ce98d8d9df07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0
+  angle: 0
+  forceinput: {fileID: 0}
+  angleinput: {fileID: 0}
+  scoretext: {fileID: 0}
+  triestext: {fileID: 0}
+  score: 0
+  tries: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
