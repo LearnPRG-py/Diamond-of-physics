@@ -48,7 +48,7 @@ public class Main : MonoBehaviour
     }
     public void Check(){
         if (forcereq == areasel*0.9){
-            Correct()
+            Correct();
         }
         else{
             tries+=1;
