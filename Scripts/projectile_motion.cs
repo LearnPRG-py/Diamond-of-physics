@@ -13,6 +13,9 @@ public class projectile_motion : MonoBehaviour
     public Text triestext;
     public float score;
     public float tries;
+    public Rigidbody2D projectile;
+    public Collider2D Target;
+    public Collider2D Projectilecollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +32,9 @@ public class projectile_motion : MonoBehaviour
     }
     void GetAngle(string b){
         angle = float.Parse(b);
+    }
+    void Reset(){
+        projectile.gravityScale = 0;
+        projectile.velocity = Vector2.zero;
     }
 }
