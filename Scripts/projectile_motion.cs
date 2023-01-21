@@ -15,6 +15,7 @@ public class projectile_motion : MonoBehaviour
     public Rigidbody2D projectile;
     public Collider2D Target;
     public Collider2D Projectilecollider;
+    public bool addtoscore = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +27,14 @@ public class projectile_motion : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R)){
             Reset();
+            addtoscore = false;
         }
         if (Projectilecollider.IsTouching(Target)){
-            IfTouch();
+            if (addtoscore){
+                IfTouch();
+                addtoscore = false;
+                }
+            
         }
         UpdateTXT();
     }
