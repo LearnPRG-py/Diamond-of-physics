@@ -7,8 +7,6 @@ public class projectile_motion : MonoBehaviour
 {
     public float force;
     public float angle;
-    public InputField forceinput;
-    public InputField angleinput;
     public Text scoretext;
     public Text triestext;
     public float score;
@@ -25,7 +23,9 @@ public class projectile_motion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R)){
+            Reset();
+        }
     }
     public void GetForce(string a){
         force = float.Parse(a);
