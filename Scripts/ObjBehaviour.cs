@@ -7,7 +7,7 @@ using System;
 public class ObjBehaviour : MonoBehaviour
 {
     public Text objdisttxt;
-    public float focaldist = 1;
+    public float focaldist = 1f;
     public float objectdist;
     public float imagedist;
     public float randomobjdist = -5f;
@@ -38,17 +38,19 @@ public class ObjBehaviour : MonoBehaviour
         imagedist = focaldist*objectdist/focaldist+objectdist;
     }
     public void ifCorrect(){
-        randomobjdist = (float)(randomobj.Next(0, 8)-9f);
+        randomobjdist = (float)(randomobj.Next(0, 8))-9f;
         reqimgdist = focaldist*randomobjdist/focaldist+randomobjdist;
+        Debug.Log(reqimgdist);
         ReqImgDistTXT.text = "Req Img Distance = "+reqimgdist.ToString();
         score+=1;
         scoreTXT.text = "Score:"+score.ToString();
-        triesTXT.text = "Tries:"+tries.ToString();
 
     }
     public void Check(){
         FindImgDist();
         tries+=1;
+        triesTXT.text = "Tries:"+tries.ToString();
+        Debug.Log(objectdist);
         if (randomobjdist == objectdist){
             ifCorrect();
         }

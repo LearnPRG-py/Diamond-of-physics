@@ -1,21 +1,60 @@
 body {
-  background-image: linear-gradient(green, rgb(43, 43, 102));
+  background-image: linear-gradient(rgb(36, 207, 127), rgb(80, 80, 126));
   height: 1000px;
 }
 
+.logo {
+  width: 100px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
 .heading {
-  text-align: center;
-  font-size: 70px;
+  margin-left: 250px;
+  margin-bottom: 100px;
+  font-size: 100px;
   color: rgb(25, 173, 173);
+  display: inline-block;
+  text-shadow: 0 0 20px #ff0000;
 }
 
 .start_adventure_button {
   font-size: 40px;
+  height: 150px;
+  border-radius: 20px;
+  background: url("button_action.jpeg");
+  background-size: cover;
+  font-family: Roboto_Mono;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  margin-left: 200px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px black;
+}
+
+.about_us {
+  margin-left: 250px;
+  font-size: 40px;
   border-radius: 20px;
   background-color: aquamarine;
   font-family: Roboto_Mono;
+  border-color: black;
+  border-style: solid;
+  cursor: pointer;
 }
 
-.text_align_center_button {
-  text-align: center;
+.tutorial {
+  margin-left: 250px;
+  font-size: 40px;
+  border-radius: 20px;
+  background-color: aquamarine;
+  font-family: Roboto_Mono;
+  border-color: black;
+  border-style: solid;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
 }
