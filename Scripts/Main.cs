@@ -18,19 +18,22 @@ public class Main : MonoBehaviour
     public float randomar;
     public float score;
     public float tries;
+    public Text scoretxt;
+    public Text triestxt;
 
 
     // Start is called before the first frame update
     void Start()
     {
         forcereq = 23f;
-        FreqText = "Force req = "+forcereq.ToString();
+        FreqText.text = "Force req = "+forcereq.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        scoretxt.text = "Score: " + score.ToString();
+        triestxt.text = "Tries: " + tries.ToString();
     }
     public void SetSize(float a){
         transform.localScale = new Vector3 (a/10, 5f, 1f);
