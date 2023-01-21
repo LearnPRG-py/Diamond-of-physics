@@ -29,6 +29,9 @@ public class projectile_motion : MonoBehaviour
     }
     public void GetForce(string a){
         force = float.Parse(a);
+        if (force>20){
+            force = 20;
+        }
     }
     public void GetAngle(string b){
         angle = float.Parse(b);
