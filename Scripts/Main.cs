@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
+    public void areaInit = 1;
+    public void forceIn = 9;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,8 @@ public class Main : MonoBehaviour
     void Update()
     {
         
+    }
+    public void SetSize(float a){
+        transform.localScale = (a/10, 5, 1);
     }
 }
