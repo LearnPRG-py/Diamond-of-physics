@@ -30,6 +30,7 @@ public class projectile_motion : MonoBehaviour
         if (Projectilecollider.IsTouching(Target)){
             IfTouch();
         }
+        UpdateTXT();
     }
     public void GetForce(string a){
         force = float.Parse(a);
