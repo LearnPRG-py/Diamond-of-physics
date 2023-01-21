@@ -27,7 +27,7 @@ public class projectile_motion : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R)){
             Reset();
-            addtoscore = false;
+            addtoscore = true;
         }
         if (Projectilecollider.IsTouching(Target)){
             if (addtoscore){
