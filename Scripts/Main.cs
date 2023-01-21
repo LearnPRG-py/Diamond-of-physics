@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour
 {
-    public void areaInit = 1;
-    public void forceIn = 9;
+    public float areaInit = 10f;
+    public float forceIn = 9f;
+    public Text loltext;
+    public float a = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +23,9 @@ public class Main : MonoBehaviour
         
     }
     public void SetSize(float a){
-        transform.localScale = (a/10, 5, 1);
+        transform.localScale = new Vector3 (a/10, 5f, 1f);
+    }
+    public void Trolltext(){
+        loltext.text = "Hmm this seems hard...";
     }
 }
