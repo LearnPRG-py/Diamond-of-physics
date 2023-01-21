@@ -14,7 +14,7 @@ public class Main : MonoBehaviour
     public Text FreqText;
     public System.Random randomforce = new System.Random();
     public float a = 1;
-    public float forcereq;
+    public float forcereq = 23f;
     public float randomar;
     public float score;
     public float tries;
@@ -25,8 +25,7 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        forcereq = 23f;
-        FreqText.text = "Force req = "+forcereq.ToString();
+
     }
 
     // Update is called once per frame
@@ -46,6 +45,7 @@ public class Main : MonoBehaviour
     public void Correct(){
         randomar = (float)randomforce.Next(1,100);
         forcereq = randomar*0.9f;
+        FreqText.text = "Force req = "+forcereq.ToString();
         score+=1;
         tries+=1;
     }
