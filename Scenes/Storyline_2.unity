@@ -549,7 +549,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Weblink
+          m_StringArgument: Launch
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &997433322
@@ -617,7 +617,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691881097}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8b39404c800b742ea88bcc819ec91512, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: bbce42bc6fdeb431a8cd2146448ef252, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
