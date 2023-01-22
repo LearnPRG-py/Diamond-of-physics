@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 10992212}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 29878760}
+        m_TargetAssemblyTypeName: projectile_motion, Assembly-CSharp
+        m_MethodName: Hints
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &10992212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,9 +406,9 @@ MonoBehaviour:
   addtoscore: 1
   scoreadd: 1
   hints: 0
-  hint1: {fileID: 0}
-  hint2: {fileID: 0}
-  hint3: {fileID: 0}
+  hint1: {fileID: 1126951458}
+  hint2: {fileID: 1361826826}
+  hint3: {fileID: 1639210860}
 --- !u!1 &163182687
 GameObject:
   m_ObjectHideFlags: 0
