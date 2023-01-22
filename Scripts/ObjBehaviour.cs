@@ -18,6 +18,12 @@ public class ObjBehaviour : MonoBehaviour
     public Text triesTXT;
     public Text scoreTXT;
     public Text ReqImgDistTXT;
+    public float scoreadd = 1f;
+    public float hints = 0f;
+    
+    public Text hint1;
+    public Text hint2;
+    public Text hint3;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +52,7 @@ public class ObjBehaviour : MonoBehaviour
         else{
             ReqImgDistTXT.text = "Req Img Distance = Infinity";
         }    
-        score+=1;
+        score+=scoreadd;
         scoreTXT.text = "Score:"+score.ToString();
 
     }
@@ -58,5 +64,21 @@ public class ObjBehaviour : MonoBehaviour
         if (randomobjdist == objectdist-9f){
             ifCorrect();
         }
+    }
+        public void Hints(){
+        hints+=1;
+        if (hints == 1f){
+            hint1.text = "The lensmakers formula is handy here";
+            scoreadd=1f;
+        }
+        if (hints == 2f){
+            hint2.text = "1/image distance+1/object distance = 1/focal length, careful with the signs!!";
+            scoreadd=0.75f;
+        }
+        if (hints == 3f){
+            hint3.text = "imagedist = focaldist*objectdist/focaldist+objectdist";
+            scoreadd=0.5f;
+        }
+
     }
 }
