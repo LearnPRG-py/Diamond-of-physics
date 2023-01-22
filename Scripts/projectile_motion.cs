@@ -16,6 +16,12 @@ public class projectile_motion : MonoBehaviour
     public Collider2D Target;
     public Collider2D Projectilecollider;
     public bool addtoscore = true;
+    public float scoreadd=1f;
+    public float hints =0f;
+
+    public Text hint1;
+    public Text hint2;
+    public Text hint3;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,11 +71,27 @@ public class projectile_motion : MonoBehaviour
     }
     public void IfTouch(){
         Reset();
-        score+=1;
+        score+=scoreadd;
     }
     public void UpdateTXT(){
         scoretext.text = "Score: "+score.ToString();
         triestext.text = "Tries:"+tries.ToString();
         projpos.text = "("+transform.position.x+","+transform.position.y+")";
+    }
+    public void Hints(){
+        hints+=1;
+        if (hints == 1f){
+            hint1.text = "The formula can be derived by assuming \n that the projectile hits target at max hight";
+            scoreadd=1f;
+        }
+        if (hints == 2f){
+            hint2.text = "velocity initial = 2*horz displacement*\nvert displacement*sin^2(the angle of launch)";
+            scoreadd=0.75f;
+        }
+        if (hints == 3f){
+            hint3.text = "the angle of launch = tan inverse of \n (2*vert displacement/horz displacement)";
+            scoreadd=0.5f;
+        }
+
     }
 }

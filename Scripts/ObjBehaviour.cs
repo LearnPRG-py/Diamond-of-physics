@@ -39,9 +39,13 @@ public class ObjBehaviour : MonoBehaviour
     }
     public void ifCorrect(){
         randomobjdist = (float)(randomobj.Next(0, 8))-9f;
-        reqimgdist = focaldist*randomobjdist/focaldist+randomobjdist;
-        Debug.Log(reqimgdist);
-        ReqImgDistTXT.text = "Req Img Distance = "+reqimgdist.ToString();
+        if(randomobjdist != 0){
+            reqimgdist = focaldist*randomobjdist/(focaldist+randomobjdist);
+            ReqImgDistTXT.text = "Req Img Distance = "+reqimgdist.ToString();
+        }
+        else{
+            ReqImgDistTXT.text = "Req Img Distance = Infinity";
+        }    
         score+=1;
         scoreTXT.text = "Score:"+score.ToString();
 
@@ -51,7 +55,7 @@ public class ObjBehaviour : MonoBehaviour
         tries+=1;
         triesTXT.text = "Tries:"+tries.ToString();
         Debug.Log(objectdist);
-        if (randomobjdist == objectdist){
+        if (randomobjdist == objectdist-9f){
             ifCorrect();
         }
     }
