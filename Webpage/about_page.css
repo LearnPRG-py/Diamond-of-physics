@@ -7,6 +7,10 @@
   text-shadow: 0 0 20px #ff0000;
 }
 
+.logo:hover {
+  opacity: 60%;
+}
+
 .logo {
   width: 100px;
   border-radius: 100px;
@@ -15,10 +19,33 @@
 
 body {
   background-image: linear-gradient(rgb(36, 207, 127), rgb(80, 80, 126));
-  height: 2000px;
+  height: 1750px;
 }
 
 p {
-  font-size: 50px;
+  font-size: 30px;
   color: antiquewhite;
+}
+
+img {
+  width: 300px;
+  border-color: black;
+  border: 140px;
+  border-radius: 50px;
+}
+
+p {
+  text-align: left;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.sresht {
+  width: 300px;
+  height: 250px;
+}
+
+.everyone {
+  width: 300px;
+  height: 200px;
 }

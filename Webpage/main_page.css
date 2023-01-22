@@ -9,6 +9,10 @@ body {
   cursor: pointer;
 }
 
+.logo:hover {
+  opacity: 60%;
+}
+
 .heading {
   margin-left: 250px;
   margin-bottom: 100px;
@@ -16,6 +20,7 @@ body {
   color: rgb(25, 173, 173);
   display: inline-block;
   text-shadow: 0 0 20px #ff0000;
+  margin-top: 0;
 }
 
 .start_adventure_button {
@@ -31,6 +36,18 @@ body {
   cursor: pointer;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 5px black;
+}
+
+.start_adventure_button:hover {
+  opacity: 60%;
+}
+
+.about_us:hover {
+  opacity: 60%;
+}
+
+.tutorial:hover {
+  opacity: 60%;
 }
 
 .about_us {
@@ -55,6 +72,25 @@ body {
   cursor: pointer;
 }
 
-button {
-  display: inline-block;
+.padlet_link {
+  display: block;
+  margin-left: 725px;
+  font-size: 40px;
+  border-radius: 20px;
+  background-color: aquamarine;
+  font-family: Roboto_Mono;
+  border-color: black;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.padlet_link:hover {
+  opacity: 60%;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 0px;
+  color: rgb(119, 106, 40);
 }

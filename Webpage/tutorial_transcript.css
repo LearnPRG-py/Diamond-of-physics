@@ -7,6 +7,10 @@
   text-shadow: 0 0 20px #ff0000;
 }
 
+.logo:hover {
+  opacity: 60%;
+}
+
 body {
   background-image: linear-gradient(rgb(36, 207, 127), rgb(80, 80, 126));
   height: 3500px;
@@ -23,8 +27,9 @@ p {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 50px;
   color: antiquewhite;
+  margin-left: 100px;
 }
 
 .explanations {
