@@ -34,7 +34,7 @@ public class ObjBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        MoveScene();
     }
     public void MoveObj(float a){
         transform.position = new Vector3 (a-9f,0.5f,0f);

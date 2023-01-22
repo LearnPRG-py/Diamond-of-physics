@@ -32,6 +32,7 @@ public class projectile_motion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveScene();
         if (Input.GetKeyDown(KeyCode.R)){
             Reset();
             addtoscore = true;

@@ -38,7 +38,7 @@ public class Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        MoveScene();
     }
     public void SetSize(string a){
         transform.localScale = new Vector3 (float.Parse(a)/10, 5f, 1f);
