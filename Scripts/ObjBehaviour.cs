@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ObjBehaviour : MonoBehaviour
 {
@@ -79,6 +80,10 @@ public class ObjBehaviour : MonoBehaviour
             hint3.text = "imagedist = focaldist*objectdist/focaldist+objectdist";
             scoreadd=0.5f;
         }
-
+    }
+    public void MoveScene(){
+        if (score > 5f){
+            SceneManager.LoadScene("End");
+        }
     }
 }

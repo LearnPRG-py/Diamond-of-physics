@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
@@ -82,5 +83,10 @@ public class Main : MonoBehaviour
             scoreadd=0.5f;
         }
 
+    }
+    public void MoveScene(){
+        if (score > 3f){
+            SceneManager.LoadScene("Lens");
+        }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class projectile_motion : MonoBehaviour
 {
@@ -93,5 +94,10 @@ public class projectile_motion : MonoBehaviour
             scoreadd=0.5f;
         }
 
+    }
+    public void MoveScene(){
+        if (score > 5f){
+            SceneManager.LoadScene("SL3");
+        }
     }
 }
