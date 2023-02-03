@@ -87,7 +87,7 @@ public class projectile_motion : MonoBehaviour
             scoreadd=1f;
         }
         if (hints == 2f){
-            hint2.text = "velocity initial = 2*horz displacement*\nvert displacement*sin^2(the angle of launch)";
+            hint2.text = "velocity initial^2 = 2*horz displacement*\nvert displacement*sin^2(the angle of launch)";
             scoreadd=0.75f;
         }
         if (hints == 3f){

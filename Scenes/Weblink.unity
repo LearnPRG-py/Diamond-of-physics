@@ -461,13 +461,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To go through your training go to https://bit.ly/DOPWWP
+  m_Text: 'To go through your training go to https://diamondofphysics-cu.aryankrishnan.repl.co
 
-    and go to
-    the training transcript on the webpage, read throughly...
+    and
+    go to the training transcript on the webpage, read throughly...
 
-    Time for a quiz...
-    go to bit.ly/PDQuizCU'
+    Time for
+    a quiz... go to bit.ly/PDQuizCU'
 --- !u!222 &1374762178
 CanvasRenderer:
   m_ObjectHideFlags: 0

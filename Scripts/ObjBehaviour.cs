@@ -21,14 +21,19 @@ public class ObjBehaviour : MonoBehaviour
     public Text ReqImgDistTXT;
     public float scoreadd = 1f;
     public float hints = 0f;
-    
+    public int LBid = 11229;
     public Text hint1;
     public Text hint2;
     public Text hint3;
+    public LineRenderer l;
+    public float imght;
+    public float imgdist;
+    public bool click;
+           
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -40,10 +45,9 @@ public class ObjBehaviour : MonoBehaviour
         transform.position = new Vector3 (a-9f,0.5f,0f);
         objdisttxt.text = "Object distance = "+(a-9f).ToString();
         objectdist = a;
+        l.enabled = false;
     }
-    public void FindImgDist(){
-        imagedist = focaldist*objectdist/focaldist+objectdist;
-    }
+
     public void ifCorrect(){
         randomobjdist = (float)(randomobj.Next(0, 8))-9f;
         if(randomobjdist != 0){
@@ -58,10 +62,29 @@ public class ObjBehaviour : MonoBehaviour
 
     }
     public void Check(){
-        FindImgDist();
         tries+=1;
         triesTXT.text = "Tries:"+tries.ToString();
         Debug.Log(objectdist);
+        imgdist = (focaldist+(objectdist-9f))/(focaldist*(objectdist-9f));
+        imght = imgdist/(objectdist-9f);
+        List<Vector3> points1 = new List<Vector3>();
+        List<Vector3> points2 = new List<Vector3>();
+        if (objectdist != 8f){
+        l.enabled = true;
+        points1.Add(new Vector3(objectdist-9f, 1f, 0));
+        points1.Add(new Vector3(0, 1f, 0));
+        points1.Add(new Vector3(imgdist, imght, 0));
+        points1.Add(new Vector3(objectdist-9f, 1f, 0));
+        Debug.Log(objectdist);
+        Debug.Log(imgdist);
+        Debug.Log(imght);
+        l.startWidth = 0.1f;
+        l.endWidth = 0.1f;
+        l.SetPositions(points1.ToArray());
+        l.useWorldSpace = true;
+       //Debug.Log(imght);
+       click = false;
+        }
         if (randomobjdist == objectdist-9f){
             ifCorrect();
         }
@@ -83,7 +106,7 @@ public class ObjBehaviour : MonoBehaviour
     }
     public void MoveScene(){
         if (score > 5f){
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("Lines");
         }
     }
 }
