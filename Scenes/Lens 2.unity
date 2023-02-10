@@ -404,8 +404,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1183248080}
-        m_TargetAssemblyTypeName: ObjBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1183248083}
+        m_TargetAssemblyTypeName: ObjBehaviour2, Assembly-CSharp
         m_MethodName: Check
         m_Mode: 1
         m_Arguments:
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1183248080}
-        m_TargetAssemblyTypeName: ObjBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1183248083}
+        m_TargetAssemblyTypeName: ObjBehaviour2, Assembly-CSharp
         m_MethodName: Hints
         m_Mode: 1
         m_Arguments:
@@ -1090,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 605126026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.083333336, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 757874662}
@@ -1174,7 +1174,7 @@ Transform:
   m_GameObject: {fileID: 664827100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.083333336, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 757874662}
@@ -1257,8 +1257,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702231513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 0.1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.05, z: -1}
+  m_LocalScale: {x: 0.1, y: 2.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 757874662}
@@ -1450,7 +1450,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 503e9246732d14164b1e96ff3e10c3f8, type: 3}
   m_Color: {r: 0.3915094, g: 0.8722519, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1470,7 +1470,7 @@ Transform:
   m_GameObject: {fileID: 757874660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 3, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 605126027}
@@ -1766,7 +1766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183248082}
   - component: {fileID: 1183248081}
-  - component: {fileID: 1183248080}
+  - component: {fileID: 1183248083}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1774,39 +1774,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1183248080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183248079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a800f106ff86d4e6187f220e18271fb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objdisttxt: {fileID: 1414365982}
-  focaldist: 1
-  objectdist: 0
-  imagedist: 0
-  randomobjdist: -5
-  reqimgdist: 1.25
-  score: 0
-  tries: 0
-  triesTXT: {fileID: 931420775}
-  scoreTXT: {fileID: 1980881046}
-  ReqImgDistTXT: {fileID: 1330780401}
-  scoreadd: 1
-  hints: 0
-  LBid: 11229
-  hint1: {fileID: 1998801099}
-  hint2: {fileID: 405367590}
-  hint3: {fileID: 102371670}
-  l: {fileID: 405368221}
-  imght: 0
-  imgdist: 0
-  click: 0
 --- !u!212 &1183248081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1874,6 +1841,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183248083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183248079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7867924d4864537ad2b3b76971e3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objdisttxt: {fileID: 1414365982}
+  focaldist: -1
+  objectdist: 0
+  imagedist: 0
+  randomobjdist: -4
+  reqimgdist: -0.8
+  score: 0
+  tries: 0
+  triesTXT: {fileID: 931420775}
+  scoreTXT: {fileID: 1980881046}
+  ReqImgDistTXT: {fileID: 1330780401}
+  scoreadd: 1
+  hints: 0
+  LBid: 11229
+  hint1: {fileID: 1998801099}
+  hint2: {fileID: 405367590}
+  hint3: {fileID: 102371670}
+  l: {fileID: 405368221}
+  imght: 0
+  imgdist: 0
+  click: 0
 --- !u!1 &1330780399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,7 +1945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Req Img Distance = 1.25
+  m_Text: Req Img Distance = -0.8
 --- !u!222 &1330780402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2205,8 +2205,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1183248080}
-        m_TargetAssemblyTypeName: ObjBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1183248083}
+        m_TargetAssemblyTypeName: ObjBehaviour2, Assembly-CSharp
         m_MethodName: MoveObj
         m_Mode: 0
         m_Arguments:
@@ -2524,7 +2524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Focal Distance = 1
+  m_Text: Focal Distance = -1
 --- !u!222 &2018349298
 CanvasRenderer:
   m_ObjectHideFlags: 0

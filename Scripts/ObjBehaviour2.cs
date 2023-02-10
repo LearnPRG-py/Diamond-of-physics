@@ -5,14 +5,14 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
 
-public class ObjBehaviour : MonoBehaviour
+public class ObjBehaviour2 : MonoBehaviour
 {
     public Text objdisttxt;
-    public float focaldist = 1f;
+    public float focaldist = -1f;
     public float objectdist;
     public float imagedist;
-    public float randomobjdist = -5f;
-    public float reqimgdist = 1.25f;
+    public float randomobjdist = -4f;
+    public float reqimgdist = -0.8f;
     public System.Random randomobj = new System.Random();
     public float score;
     public float tries;
@@ -50,7 +50,7 @@ public class ObjBehaviour : MonoBehaviour
 
     public void ifCorrect(){
         randomobjdist = (float)(randomobj.Next(0, 8))-9f;
-        if(randomobjdist != 0){
+        if(randomobjdist != -1){
             reqimgdist = focaldist*randomobjdist/(focaldist+randomobjdist);
             ReqImgDistTXT.text = "Req Img Distance = "+reqimgdist.ToString();
         }
@@ -106,7 +106,7 @@ public class ObjBehaviour : MonoBehaviour
     }
     public void MoveScene(){
         if (score > 5f){
-            SceneManager.LoadScene("Lens 2");
+            SceneManager.LoadScene("Lines");
         }
     }
 }

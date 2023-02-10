@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Liness : MonoBehaviour
 {
 public System.Random pointxr = new System.Random();
@@ -20,6 +21,8 @@ public float score;
 public float tries;
 public LineRenderer LR1;
 public LineRenderer LR2;
+public GameObject yayudidit;
+
 
 public float scoreadd=1f;
 public float hints =0f;
@@ -40,8 +43,8 @@ void Update(){
 }
 public void updatetxt()
 {
-	EQN1.text = "y = "+ M1.ToString() +"x + "+(pointy-M1*pointx).ToString();
-	EQN2.text = "y = "+M2.ToString()+"x + "+(pointy-M2*pointx).ToString();
+	EQN1.text = "y = "+ M1.ToString() +"x + ("+(pointy-M1*pointx).ToString()+")";
+	EQN2.text = "y = "+M2.ToString()+"x + ("+(pointy-M2*pointx).ToString()+")";
     scoreTXT.text = "Score: "+score.ToString();
     triesTXT.text = "Tries: "+tries.ToString();
 }
@@ -49,11 +52,13 @@ public void getansX(string a){
 ansX = int.Parse(a);
 LR1.enabled = false;
 LR2.enabled = false;
+yayudidit.SetActive(false);
 }
 public void getansY(string b){
 ansY = int.Parse(b);
 LR1.enabled = false;
 LR2.enabled = false;
+yayudidit.SetActive(false);
 }
 
 public void checkans(){
@@ -69,17 +74,22 @@ LR1.startWidth = 0.1f;
 LR1.endWidth = 0.1f;
 LR1.SetPositions(points1.ToArray());
 LR1.useWorldSpace = true;
+LR1.SetColors(Color.red, Color.red);
 LR2.startWidth = 0.05f;
 LR2.endWidth = 0.05f;
 LR2.SetPositions(points2.ToArray());
 LR2.useWorldSpace = true;
+LR2.SetColors(Color.blue, Color.blue);
 if (ansX == pointx){
 	if (ansY == pointy){
+    
 	score+=scoreadd;
+    yayudidit.SetActive(true);
     updateReq();
 }
 }
 tries+=1;
+SwitchScene();
 }
 public void updateReq(){
     pointx = pointxr.Next(-7, 7);
@@ -103,4 +113,9 @@ public void Hints(){
     }
 
     }
+void SwitchScene(){
+    if (score > 7f){
+        SceneManager.LoadScene("End");
+    }
+}
 }
