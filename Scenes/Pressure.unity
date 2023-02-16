@@ -690,6 +690,7 @@ MonoBehaviour:
   click: 0
   scoreadd: 1
   hints: 0
+  ltno: 0
   hint1: {fileID: 0}
   hint2: {fileID: 0}
   hint3: {fileID: 0}
@@ -932,7 +933,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I Know the answer!
+  m_Text: Check answer
 --- !u!222 &545042063
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1519,10 +1520,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2742,6 +2743,7 @@ MonoBehaviour:
   click: 0
   scoreadd: 1
   hints: 0
+  ltno: 0
   hint1: {fileID: 1086554223}
   hint2: {fileID: 1349667006}
   hint3: {fileID: 1320345206}

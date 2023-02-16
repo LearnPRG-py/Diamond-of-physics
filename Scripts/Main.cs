@@ -24,6 +24,7 @@ public class Main : MonoBehaviour
     public bool click;
     public float scoreadd = 1f;
     public float hints = 0f;
+    public float ltno = 0f;
     
     public Text hint1;
     public Text hint2;
@@ -44,8 +45,38 @@ public class Main : MonoBehaviour
         transform.localScale = new Vector3 (float.Parse(a)/10, 5f, 1f);
         area.text = "Area of right = "+a.ToString();
         areasel = (int)(float.Parse(a));
-        if (click){
-            if (randomar == areasel){
+        }
+
+    
+    public void Trolltext(string a){
+        if (ltno == 0){
+            loltext.text = "Hmm this seems hard...";
+            }
+        if (ltno == 1){
+            loltext.text = "I do not think this works...";
+            }
+        if (ltno == 2){
+            loltext.text = "Yep this does not function...";
+            }
+        if (ltno == 3){
+            loltext.text = "Im serious...";
+            }
+        if (ltno == 4){
+            loltext.text = "whatever... keep trying...";
+            }
+        if (ltno == 5){
+            loltext.text = "hmm how do we open the door?";
+        }
+        if (ltno == 6){
+            loltext.text = "that contraption.. on the left...";
+        }
+        if (a == "Aryan"){
+            loltext.text = "I recognize that name but no...";
+        }
+        ltno=ltno+1f;
+    }
+    public void Check(){
+        if (randomar == areasel){
             randomar = randomforce.Next(1,100);
             forcereq = ((float)randomar)*0.9f;
             FreqText.text = "Force req = "+forcereq.ToString();
@@ -59,14 +90,6 @@ public class Main : MonoBehaviour
             scoretxt.text = "Score: " + score.ToString();
             triestxt.text = "Tries: " + tries.ToString();
         }
-        }
-
-    }
-    public void Trolltext(){
-        loltext.text = "Hmm this seems hard...";
-    }
-    public void Check(){
-        click = true;
     }
     public void Hints(){
         hints+=1;

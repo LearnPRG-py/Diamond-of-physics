@@ -58,8 +58,6 @@ public class projectile_motion : MonoBehaviour
     void Reset(){
         projectile.gravityScale = 0;
         projectile.velocity = Vector2.zero;
-        force = 0f;
-        angle = 0f;
         transform.position = new Vector3 (-5f, -1.6f, 0f);
     }
     public void Launch(){

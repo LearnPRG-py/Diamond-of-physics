@@ -430,7 +430,9 @@ MonoBehaviour:
   ScaleTXT: {fileID: 857242974}
   ramp: {fileID: 1315212496}
   speed: 0
-  objRB: {fileID: 0}
+  objRB: {fileID: 437716632}
+  randomscale: 1
+  reqSpeed: 14
 --- !u!61 &437716637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -541,10 +543,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 38414693}
   m_HandleRect: {fileID: 2094243867}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 50
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
