@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class FNM : MonoBehaviour
 {
     public float accn_needed = 5f;
@@ -41,6 +41,7 @@ public class FNM : MonoBehaviour
         accn_needed_TXT.text = "Acceleration needed: " + accn_needed + "m/s^2";
         Score +=scoreadd;
         ScoreTXT.text = "Score: "+Score.ToString();
+        SwitchScene();
     }
     public void Check(){
         Tries +=1f;
@@ -70,4 +71,9 @@ public class FNM : MonoBehaviour
             scoreadd=0.5f;
         }
     }
+    void SwitchScene(){
+    if (Score > 5f){
+        SceneManager.LoadScene("Forces and motion w Friction");
+    }
+}
 }

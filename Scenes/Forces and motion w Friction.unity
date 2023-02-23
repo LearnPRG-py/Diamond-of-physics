@@ -511,7 +511,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 556308174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a51f4daa9453c4e46a8776d94853764c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5007166788ef54e2b8711d88ee8814f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   accn_needed: 5
@@ -529,6 +529,7 @@ MonoBehaviour:
   hint3: {fileID: 1666039936}
   scoreadd: 1
   obj: {fileID: 556308176}
+  frictioncoeff: 0.3
 --- !u!1 &556777316
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +741,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 556308179}
-        m_TargetAssemblyTypeName: FNM, Assembly-CSharp
+        m_TargetAssemblyTypeName: FNMF, Assembly-CSharp
         m_MethodName: GetForce
         m_Mode: 0
         m_Arguments:
@@ -1283,7 +1284,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 556308179}
-        m_TargetAssemblyTypeName: FNM, Assembly-CSharp
+        m_TargetAssemblyTypeName: FNMF, Assembly-CSharp
         m_MethodName: Hints
         m_Mode: 1
         m_Arguments:
@@ -1417,7 +1418,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 556308179}
-        m_TargetAssemblyTypeName: FNM, Assembly-CSharp
+        m_TargetAssemblyTypeName: FNMF, Assembly-CSharp
         m_MethodName: Check
         m_Mode: 1
         m_Arguments:

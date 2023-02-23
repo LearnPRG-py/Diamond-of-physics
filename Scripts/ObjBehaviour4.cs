@@ -106,7 +106,7 @@ public class ObjBehaviour4 : MonoBehaviour
     }
     public void MoveScene(){
         if (score > 5f){
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("Lines");
         }
     }
 }

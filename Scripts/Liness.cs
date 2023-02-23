@@ -115,7 +115,7 @@ public void Hints(){
     }
 void SwitchScene(){
     if (score > 7f){
-        SceneManager.LoadScene("End");
+        SceneManager.LoadScene("Econs");
     }
 }
 }

@@ -108,7 +108,7 @@ public class Main : MonoBehaviour
 
     }
     public void MoveScene(){
-        if (score > 3f){
+        if (score > 5f){
             SceneManager.LoadScene("Lens");
         }
     }

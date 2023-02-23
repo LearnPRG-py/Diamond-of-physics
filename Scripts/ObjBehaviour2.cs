@@ -106,7 +106,7 @@ public class ObjBehaviour2 : MonoBehaviour
     }
     public void MoveScene(){
         if (score > 5f){
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("Lens 3");
         }
     }
 }

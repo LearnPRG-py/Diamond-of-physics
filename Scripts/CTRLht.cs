@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class CTRLht : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class CTRLht : MonoBehaviour
         randomscale = ((float)(rndSCL.Next(50, 100))/10f);
         reqSpeed = (float)System.Math.Sqrt(20.0f*9.81f*randomscale);
         ReqSpeedTXT.text = "Required Speed: " + reqSpeed.ToString();
+        SwitchScene();
     }
     public void check(){
         GetSpeed();
@@ -73,4 +75,9 @@ public class CTRLht : MonoBehaviour
     public void Release(){
         Physics2D.gravity = new Vector2(0, -9.8f);
     }
+    void SwitchScene(){
+    if (score > 7f){
+        SceneManager.LoadScene("Forces and motion 1");
+    }
+}
 }
