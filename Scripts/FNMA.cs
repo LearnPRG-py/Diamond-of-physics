@@ -4,17 +4,16 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
-public class FNMF : MonoBehaviour
+public class FNMA : MonoBehaviour
 {
-    public float accn_needed = 5f;
-    public Text accn_needed_TXT;
+    public float velocity_needed = 15f;
+    public Text vel_needed_TXT;
     public Text ScoreTXT;
     public Text TriesTXT;
-    public Text CurrentACCNTXT;
+    public Text CurrentVELTXT;
     public float mass = 2f;
     public float Force_entered;
-    public System.Random randaccn_needed = new System.Random();
+    public System.Random randvel_needed = new System.Random();
     public float Score;
     public float Tries;
     public float hints;
@@ -23,7 +22,6 @@ public class FNMF : MonoBehaviour
     public Text hint3;
     public float scoreadd = 1f;
     public Rigidbody2D obj;
-    public float frictioncoeff = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,29 +37,24 @@ public class FNMF : MonoBehaviour
         }
     }
     public void Correct(){
-        if ((float)((Force_entered/mass)-9.8f*frictioncoeff) == (float)accn_needed){
-            accn_needed = ((float)((randaccn_needed.Next(1, 100)))/10);
-            accn_needed_TXT.text = "Acceleration needed: " + accn_needed + "m/s^2";
-            Score +=scoreadd;
-            ScoreTXT.text = "Score: "+Score.ToString();
-            SwitchScene();
-        }
+        velocity_needed = (((float)((randvel_needed.Next(1, 100)))/10)+10f);
+        vel_needed_TXT.text = "Velocity needed: "+velocity_needed+"m/s";
+        Score +=scoreadd;
+        ScoreTXT.text = "Score: "+Score.ToString();
+        SwitchScene();
     }
     public void Check(){
         Tries +=1f;
         TriesTXT.text = "Tries: " + Tries.ToString();
-        if ((Force_entered-mass*9.8f*frictioncoeff) <= 0f){
-            CurrentACCNTXT.text = "Current acceleration: 0 m/s^2";
-        }
-        else{       
-        CurrentACCNTXT.text = "Current acceleration: "+((Force_entered/mass)-9.8f*frictioncoeff)+ "m/s^2";
+        CurrentVELTXT.text = "V after T: "+(Force_entered*1.2f/mass+10f) + "m/s";
         obj.AddForce(transform.right*Force_entered*80f);
-        }
-        Correct();
+        if ((System.Math.Abs((velocity_needed-10f)*mass/1.2f - Force_entered))< 0.1f){
+            Correct();
+        } 
     }
     public void GetForce(string a){
         Force_entered = float.Parse(a);
-        CurrentACCNTXT.text = "";
+        CurrentVELTXT.text = "";
     }
      public void Hints(){
         hints+=1;
@@ -74,14 +67,13 @@ public class FNMF : MonoBehaviour
             scoreadd=0.75f;
         }
         if (hints == 3f){
-            hint3.text = "Force is equal to mass times acceleration (F=MA)";
+            hint3.text = "Force is equal to rate of change (F=M*ΔV/ΔT)";
             scoreadd=0.5f;
         }
-    
     }
     void SwitchScene(){
     if (Score > 5f){
-        SceneManager.LoadScene("Forces and motion 2");
+        SceneManager.LoadScene("End");=
     }
-    }
+}
 }
