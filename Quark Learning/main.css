@@ -1,1 +1,28 @@
+/* Full page */
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
+/* Logo */
+.logo {
+  height: 100px;
+}
+.logo:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown_button {
+  background-color: rgb(75, 75, 255);
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+.dropdown_button:hover {
+  opacity: 60%;
+  cursor: pointer;
+}

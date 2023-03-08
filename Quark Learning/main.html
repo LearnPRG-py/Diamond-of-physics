@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="main.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,17 +13,45 @@
     <title>Quark learning - Go above and beyond!</title>
   </head>
   <body>
+    <link rel="stylesheet" href="main.css" />
     <nav class=".navbar navbar-expand-sm bg-light">
       <div class="container-fluid">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <img src="logo.png" class="nav-item1" />
+            <img
+              src="logo.png"
+              class="logo"
+              onclick="location.href='main.html'"
+            />
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=""></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href=""></a>
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle dropdown_button"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="Grade 1/grade_1.html"
+                    >Grade 1</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Grade 2</a></li>
+                <li><a class="dropdown-item" href="#">Grade 3</a></li>
+                <li><a class="dropdown-item" href="#">Grade 4</a></li>
+                <li><a class="dropdown-item" href="#">Grade 5</a></li>
+                <li><a class="dropdown-item" href="#">Grade 6</a></li>
+                <li><a class="dropdown-item" href="#">Grade 7</a></li>
+                <li><a class="dropdown-item" href="#">Grade 8</a></li>
+                <li><a class="dropdown-item" href="#">Grade 9</a></li>
+                <li><a class="dropdown-item" href="#">Grade 10</a></li>
+                <li><a class="dropdown-item" href="#">Grade 11</a></li>
+                <li><a class="dropdown-item" href="#">Grade 12</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
