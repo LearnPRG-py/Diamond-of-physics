@@ -4,6 +4,12 @@
   padding: 0px;
 }
 
+/* Navigation bar */
+
+.navigation_bar {
+  box-shadow: 0px 2px 30px black;
+}
+
 /* Logo */
 .logo {
   height: 100px;
@@ -28,3 +34,24 @@
 }
 
 /* Search Bar */
+
+.search_bar {
+  margin-left: 500px;
+  margin-top: 10px;
+  display: none;
+}
+.search_button {
+  padding-left: 5px;
+  display: none;
+}
+
+.beginSearch {
+  margin-left: 1200px;
+  width: 30px;
+  display: inline-block;
+  font-size: 60px;
+}
+
+.beginSearch:hover {
+  opacity: 60%;
+}

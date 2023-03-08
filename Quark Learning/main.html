@@ -18,9 +18,11 @@
   </head>
   <body>
     <link rel="stylesheet" href="main.css" />
-    <nav class=".navbar navbar-expand-sm bg-light">
+    <!-- Navigation Bar -->
+    <nav class=".navbar navbar-expand-sm bg-light navigation_bar">
       <div class="container-fluid">
         <ul class="navbar-nav">
+          <!-- Logo -->
           <li class="nav-item">
             <img
               src="logo.png"
@@ -28,6 +30,7 @@
               onclick="location.href='main.html'"
             />
           </li>
+          <!-- Grades dropdown -->
           <li class="nav-item">
             <div class="dropdown">
               <button
@@ -43,25 +46,71 @@
                     >Grade 1</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="#">Grade 2</a></li>
-                <li><a class="dropdown-item" href="#">Grade 3</a></li>
-                <li><a class="dropdown-item" href="#">Grade 4</a></li>
-                <li><a class="dropdown-item" href="#">Grade 5</a></li>
-                <li><a class="dropdown-item" href="#">Grade 6</a></li>
-                <li><a class="dropdown-item" href="#">Grade 7</a></li>
-                <li><a class="dropdown-item" href="#">Grade 8</a></li>
-                <li><a class="dropdown-item" href="#">Grade 9</a></li>
-                <li><a class="dropdown-item" href="#">Grade 10</a></li>
-                <li><a class="dropdown-item" href="#">Grade 11</a></li>
-                <li><a class="dropdown-item" href="#">Grade 12</a></li>
+                <li>
+                  <a class="dropdown-item" href="Grade 2/grade_2.html"
+                    >Grade 2</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 3/grade_3.html"
+                    >Grade 3</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 4/grade_4.html"
+                    >Grade 4</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 5/grade_5.html"
+                    >Grade 5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 6/grade_6.html"
+                    >Grade 6</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 7/grade_7.html"
+                    >Grade 7</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 8/grade_8.html"
+                    >Grade 8</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 9/grade_9.html"
+                    >Grade 9</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 10/grade_10.html"
+                    >Grade 10</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 11/grade_11.html"
+                    >Grade 11</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Grade 12/grade_12.html"
+                    >Grade 12</a
+                  >
+                </li>
               </ul>
             </div>
           </li>
+          <!-- Search bar -->
           <li>
-            <input class="search_bar" placeholder="Search Topics..." />
-            <button type="button" class="search_button">
+            <input class="search_bar search" placeholder="Search Topics..." />
+            <button type="button" class="search_button search">
               <i class="fa fa-search"></i>
             </button>
+            <i class="fa fa-search beginSearch" onclick="openSearch()"></i>
           </li>
         </ul>
       </div>
