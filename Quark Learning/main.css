@@ -21,7 +21,7 @@
 
 /* Dropdown */
 .dropdown_button {
-  background-color: rgb(75, 75, 255);
+  background-color: rgba(145, 145, 145, 0.253);
   border-radius: 30px;
   outline: none;
   border: none;
@@ -36,22 +36,26 @@
 /* Search Bar */
 
 .search_bar {
-  margin-left: 500px;
-  margin-top: 10px;
   display: none;
+  border-radius: 40px;
+  padding: 10px;
 }
 .search_button {
-  padding-left: 5px;
   display: none;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .beginSearch {
-  margin-left: 1200px;
-  width: 30px;
   display: inline-block;
-  font-size: 60px;
+  font-size: 40px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .beginSearch:hover {
   opacity: 60%;
+  cursor: pointer;
 }

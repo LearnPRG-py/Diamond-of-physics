@@ -1,5 +1,4 @@
 let situation1OpenSearch = document.getElementsByClassName("search")[0];
-
 function openSearch() {
   if (situation1OpenSearch.style.display == "none") {
     document.getElementsByClassName("search")[0].style.display = "inline-block";
